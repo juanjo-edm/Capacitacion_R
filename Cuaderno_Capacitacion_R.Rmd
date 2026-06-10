@@ -571,13 +571,23 @@ as.numeric(as_date("2025-09-04") - as_date("1899-12-30"))  # 45904
 
 -   `ymd("2025-09-04")` → año-mes-día
 
--   `parse_date_time("4 septiembre 2025", orders = "d B Y", locale = "es_ES")` → texto con mes en español
+-   Convertir el nombre del mes en español a número y luego usar `dmy()` → texto con mes en español sin depender de la configuración regional del servidor
 
 **Ejemplo práctico:**\
 Noticias con fecha `"4 septiembre 2025"`:
 
 ```{r}
-parse_date_time("4 septiembre 2025", "d B Y", locale = "es_ES")
+fecha_texto <- "4 septiembre 2025"
+
+meses_es <- c(
+  enero = "01", febrero = "02", marzo = "03", abril = "04",
+  mayo = "05", junio = "06", julio = "07", agosto = "08",
+  septiembre = "09", octubre = "10", noviembre = "11", diciembre = "12"
+)
+
+fecha_texto %>%
+  str_replace_all(meses_es) %>%
+  dmy()
 ```
 
 **4. De Fecha a Texto**
@@ -630,7 +640,7 @@ fecha <- ymd(paste0(yyyymm, "01"))  # "2025-07-01"
 |:---------------|:-----------------------------------------------|
 | Número → Fecha | `as_date()`, `as_datetime()`, `ymd()`, `dmy()` |
 | Fecha → Número | `as.numeric()`, restar origen Excel            |
-| Texto → Fecha  | `dmy()`, `ymd()`, `parse_date_time()`          |
+| Texto → Fecha  | `dmy()`, `ymd()`, `str_replace_all()`         |
 | Fecha → Texto  | `format()`, `format_ISO8601()`, `stamp()`      |
 
 ## 1.9) Extracción de elementos

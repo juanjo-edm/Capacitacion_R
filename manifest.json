@@ -4877,7 +4877,7 @@
   },
   "files": {
     "Cuaderno_Capacitacion_R.Rmd": {
-      "checksum": "078b1aaae0dff3595aec2dc4d61ea4ea"
+      "checksum": "ecbffcd965142546a24c1e2607e966e9"
     },
     "docs/cuaderno_capacitacion_r.nb.html": {
       "checksum": "6f3a3b39646abeda608bd1454c12184d"
@@ -4904,7 +4904,7 @@
       "checksum": "cc5b316a3ed6e31fa42dd84b066d5e59"
     },
     "notebooks/Cuaderno_Capacitacion_R.Rmd": {
-      "checksum": "dbf2de968530b76a13a3159a921100fd"
+      "checksum": "4019af03b204793b0860dd0c21b4e007"
     },
     "notebooks/images/clipboard-1074928353.png": {
       "checksum": "1254817f80f9337225bdd33946853d49"
@@ -4943,7 +4943,7 @@
       "checksum": "96e448af2464a62d4bbd07a5fc2bbab3"
     },
     "README.md": {
-      "checksum": "bbd63e4cad22034448b84a51bec41df5"
+      "checksum": "31290bfc0f633ab17931a3ffccd3b506"
     },
     "scripts/install_r_packages.R": {
       "checksum": "2ada344d6d79bfd086398da8bbe90520"
