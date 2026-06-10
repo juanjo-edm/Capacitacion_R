@@ -1,9 +1,7 @@
-install.packages("rsconnect")
-
 library(rsconnect)
 
 rsconnect::writeManifest(
   appDir = ".",
-  appPrimaryDoc = "Model Notebook Documentation.Rmd",
+  appPrimaryDoc = "Cuaderno_Capacitacion_R.Rmd",
   appMode = "rmd-static"
 )

@@ -1,6 +1,6 @@
 # Capacitacion R
 
-Proyecto de capacitacion introductoria en R centrado en el cuaderno principal `notebooks/Cuaderno_Capacitacion_R.Rmd`.
+Proyecto de capacitacion introductoria en R centrado en el cuaderno fuente `notebooks/Cuaderno_Capacitacion_R.Rmd`. Para publicacion desde GitHub en Posit Connect Cloud, el repositorio tambien incluye `Cuaderno_Capacitacion_R.Rmd` en la raiz como archivo principal de despliegue.
 
 ## Objetivo
 
@@ -12,6 +12,7 @@ Este repositorio documenta un recorrido practico por R, RStudio, importacion de 
 .
 ├── docs/
 │   └── cuaderno_capacitacion_r.nb.html
+├── Cuaderno_Capacitacion_R.Rmd
 ├── notebooks/
 │   ├── Cuaderno_Capacitacion_R.Rmd
 │   ├── credit.csv
@@ -21,7 +22,9 @@ Este repositorio documenta un recorrido practico por R, RStudio, importacion de 
 │   └── images/
 ├── scripts/
 │   ├── install_r_packages.R
+│   ├── writeManifest.R
 │   └── render_all.sh
+├── manifest.json
 ├── Capacitacion-R.Rproj
 └── README.md
 ```
@@ -45,6 +48,16 @@ bash scripts/render_all.sh
 ## Salida principal
 
 - `docs/cuaderno_capacitacion_r.nb.html`
+
+## Publicacion desde GitHub a Posit Connect Cloud
+
+El archivo principal para Connect Cloud es `Cuaderno_Capacitacion_R.Rmd` en la raiz del repositorio. Este archivo mantiene rutas relativas a `notebooks/` para que Connect pueda renderizar desde la raiz sin perder imagenes ni archivos de datos.
+
+Si regeneras el manifiesto, usa:
+
+```bash
+Rscript scripts/writeManifest.R
+```
 
 ## Publicacion con el boton Publish
 
